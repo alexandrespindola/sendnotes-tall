@@ -10,7 +10,7 @@
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h1 class="text-3xl font-semibold text-red-600">Hello Laravel!!</h1>
-                    <x-button xl rounded="full" positive>Hi there</x-button>
+                    <x-button xl rounded="full" primary>Hi there</x-button>
                 </div>
             </div>
         </div>
