@@ -13,4 +13,16 @@ class Note extends Model
     protected $guarded = [
         'id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function publishedNotes(User $user)
+    {
+        return $this->where('user_id', $user->id)
+            ->where('is_published', true)
+            ->get();
+    }
 }
