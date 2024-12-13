@@ -14,6 +14,9 @@ console_command = 'php /var/www/html/artisan tinker'
 
 [env]
   APP_ENV = 'production'
+  APP_URL = 'https://sendnotes-tall.fly.dev'
+  DB_CONNECTION='pgsql'
+  DB_URL='postgresql://postgres:G$$!W!89&x8kF@mb@db.lzjbstocooyexotkxnzj.supabase.co:5432/postgres'
   LOG_CHANNEL = 'stderr'
   LOG_LEVEL = 'info'
   LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'

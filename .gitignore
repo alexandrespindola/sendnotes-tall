@@ -21,3 +21,8 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+fly.toml
+Dockerfile
+.dockerignore
+.fly
+.github
