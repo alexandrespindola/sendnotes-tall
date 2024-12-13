@@ -21,7 +21,7 @@ return new class extends Migration
             $table->date('send_date');
             $table->boolean('is_published')->default(false);
             $table->integer('heart_count')->default(0);
-            $table->timestamps('created_at');
+            $table->timestamps();
         });
     }
 
