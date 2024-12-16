@@ -25,7 +25,7 @@ new class extends Component {
     @if ($notes->isEmpty())
         <div class="text-center text-gray-500">
             <p class="text-xl font-bold">No notes found</p>
-            <p class="text-sm">Let's create your firt note to send.</p>
+            <p class="text-sm">Let's create your first note to send.</p>
             <x-button primary right-icon="plus" class="mt-6" href="{{ route('notes.create') }}" wire:navigate>Create
                 Note</x-button>
         </div>
@@ -34,17 +34,16 @@ new class extends Component {
             Note</x-button>
         <div class="grid grid-cols-3 gap-4 mt-12">
             @foreach ($notes as $note)
-                <x-card wire:key='card-{{ $note->id }}'>
-                    <div class="flex justify-between">
-                        <div>
+                <x-card wire:key='card-{{ $note->id }}' class="flex flex-col h-full">
+                    <div class="flex justify-between gap-4">
+                        <div class="h-16">
                             <a href="{{ route('notes.edit', $note) }}" wire:navigate class="text-xl font-bold hover:underline hover:text-blue-500">{{ $note->title }}</a>
                         </div>
-                        <div class='text-xs text-gray-500'>
-                            {{ Carbon::createFromFormat('Y-m-d', $note->send_date)->format('d-M-Y') }}
+                        <div class='p-2 text-xs text-gray-500 whitespace-nowrap'>
+                            {{ Carbon::parse($note->send_date)->format('d-M-Y') }}
                         </div>
-
                     </div>
-                    <div>
+                    <div class="flex-grow">
                         <p class="mt-2 text-sm">{{ Str::limit($note->body, 50, '...') }}</p>
                     </div>
                     <div class="flex flex-row justify-between mt-4 space-x-1 items">

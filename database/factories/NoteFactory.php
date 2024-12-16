@@ -20,10 +20,11 @@ class NoteFactory extends Factory
         return [
             'id' => $this->faker->uuid,
             'user_id' => User::factory(),
-            'title' => $this->faker->sentence,
+            'title' => ucfirst($this->faker->words(5, true)),
             'body' => $this->faker->paragraph,
-            'send_date' => $this->faker->dateTimeBetween('now', '+10 days'),
-            'is_published' => true,
+            'recipient' => $this->faker->email,
+            'send_date' => $this->faker->dateTimeBetween('Y-m-d', '+10 days'),
+            'is_published' => $this->faker->boolean,
             'heart_count' => $this->faker->numberBetween(0, 20),
         ];
     }

@@ -62,7 +62,7 @@ new #[Layout('layouts.app')] class extends Component {
                 icon="user" />
             <x-input wire:model="noteSendDate" type="date" label="Send Date" icon="calendar" />
             <x-checkbox label="Note Published" wire:model="noteIsPublished">Published</x-checkbox>
-            <div class="flex flex-row justify-center gap-4 pt-2">
+            <div class="flex flex-row justify-between pt-2">
                 <x-button type="submit" spinner="saveNote">Save Note</x-button>
                 <x-button href="{{ route('notes.index') }}" flat secondary>Back to Notes</x-button>
             </div>
