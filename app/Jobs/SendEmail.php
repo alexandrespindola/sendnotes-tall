@@ -29,7 +29,7 @@ class SendEmail implements ShouldQueue
         $emailContent = "Hello! You have a new note to read. Click here to view it: {$noteUrl}";
 
         Mail::raw($emailContent, function ($message) {
-            $message->from('alexandre@titansdev.es', 'Sendnotes')
+            $message->from('info@titansmarketing.com.br', 'Sendnotes')
                 ->to($this->note->recipient)
                 ->subject('You have a new note from ' . $this->note->user->name);
         });

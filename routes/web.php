@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Models\Note;
+use Illuminate\Support\Facades\Mail;
 
 Route::view('/', 'welcome');
 

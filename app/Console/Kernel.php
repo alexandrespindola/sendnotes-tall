@@ -11,7 +11,7 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        // ...existing code...
+        $schedule->command('app:send-scheduled-notes')->timezone('Europe/Berlin')->dailyAt('09:00');
     }
 
     protected function commands()
